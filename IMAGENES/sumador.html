@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0094)http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/7_sumadores.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- Created using eXe: http://exelearning.org --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+@import url(base.css);
+@import url(content.css);
+@import url(nav.css);</style>
+<title> 7. Sumadores </title>
+
+<script type="text/javascript" src="./sumador_files/common.js.descarga"></script>
+</head>
+<body>
+<div id="content">
+<div id="navcontainer">
+<ul id="navlist">
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/index.html" class="withChild">Tema 3. Circuitos Combinacionales</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/1_codificadores.html" class="withoutChild">1. Codificadores</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/2_decodificadores.html" class="withoutChild">2. Decodificadores</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/3_convertidores_de_cdigo.html" class="withoutChild">3. Convertidores de código</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/4_multiplexores.html" class="withoutChild">4. Multiplexores</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/5_demultiplexores.html" class="withoutChild">5. Demultiplexores</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/6_comparadores.html" class="withoutChild">6. Comparadores</a></div>
+<div id="active" class="withoutChild">7. Sumadores</div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/8_restadores.html" class="withoutChild">8. Restadores</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/9_detectoresgeneradores_de_paridad.html" class="withoutChild">9. Detectores/generadores de paridad</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/10_otros_circuitos_lgicos_alu.html" class="withoutChild">10. Otros circuitos lógicos: ALU</a></div>
+<div><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/ejercicios_resueltos.html" class="withoutChild">Ejercicios Resueltos</a></div>
+</ul>
+</div>
+<div id="main">
+<div id="nodeDecoration"><p id="nodeTitle">7. Sumadores</p></div>
+<div class="FreeTextIdevice" id="id38">
+<div class="iDevice emphasis0">
+<div id="ta38_1" class="block" style="display:block">
+
+<p>
+
+Un sumador es un
+
+circuito que realiza la suma de dos palabras binarias. Es distinta de la
+
+operación OR, con la que no nos debemos confundir. La operación suma de
+
+números binarios tiene la misma mecánica que la de números decimales.
+
+</p>
+
+<p>
+
+Por lo que en la suma de
+
+números binarios con dos o más bits, puede ocurrir el mismo caso que podemos
+
+encontrar en la suma de números decimales con varias cifras: cuando al sumar
+
+los dos primeros dígitos se obtiene una cantidad mayor de 9, se da como
+
+resultado el dígito de menor peso y “me llevo" el anterior a la siguiente
+
+columna, para sumarlo allí.
+
+</p>
+
+<p>
+
+En la suma binaria de
+
+los dígitos 1 + 1, el resultado es 0 y me llevo 1, que debo sumar en la columna
+
+siguiente y pudiéndose escribir 10, solamente cuando sea la última columna a
+
+sumar. A este bit más significativo de la operación de sumar, se le conoce en
+
+inglés como carry (acarreo), equivalente al “me llevo una” de la suma decimal. 
+
+</p>
+
+<span style="font-size: 12pt; font-family: &#39;Times New Roman&#39;"> </span>
+
+</div></div>
+</div>
+<div class="FreeTextIdevice" id="id39">
+<div class="iDevice emphasis0">
+<div id="ta39_1" class="block" style="display:block">
+
+<p class="MsoNormal">
+
+<b>Semisumador</b>. Es un dispositivo capaz de sumar dos bits y dar como resultado la suma de
+
+ambos y el acarreo. La
+
+tabla de verdad correspondiente a esta operación sería:
+
+</p>
+
+<table align="center" border="1">
+
+	<tbody>
+
+		<tr>
+
+			<td colspan="2"> Entradas</td>
+
+			<td colspan="2">Salidas <br>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">A <br>
+
+			</td>
+
+			<td align="center">B </td>
+
+			<td align="center">C</td>
+
+			<td align="center">S </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">0</td>
+
+			<td align="center">0</td>
+
+			<td align="center">0</td>
+
+			<td align="center">0</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">0<br>
+
+			</td>
+
+			<td align="center">1</td>
+
+			<td align="center">0</td>
+
+			<td align="center">1<br>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">1</td>
+
+			<td align="center">0</td>
+
+			<td align="center">0</td>
+
+			<td align="center">1</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">1</td>
+
+			<td align="center">1 </td>
+
+			<td align="center">1</td>
+
+			<td align="center">0</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+<p>
+
+Con lo que sus funciones
+
+canónicas serán:
+
+</p>
+
+<p class="MsoNormal" align="center">
+
+<img src="./sumador_files/eXe_LaTeX_math_2.5.gif" exe_math_latex="eXe_LaTeX_math_2.5.gif.tex" exe_math_size="4"> 
+
+</p>
+
+<p class="MsoNormal" style="text-align: center" align="center">
+
+<span style="font-size: 7pt; color: black"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+
+o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+
+stroked="f">
+
+<v:stroke joinstyle="miter"/>
+
+<v:formulas>
+
+<v:f eqn="if lineDrawn pixelLineWidth 0"/>
+
+<v:f eqn="sum @0 1 0"/>
+
+<v:f eqn="sum 0 0 @1"/>
+
+<v:f eqn="prod @2 1 2"/>
+
+<v:f eqn="prod @3 21600 pixelWidth"/>
+
+<v:f eqn="prod @3 21600 pixelHeight"/>
+
+<v:f eqn="sum @0 0 1"/>
+
+<v:f eqn="prod @6 1 2"/>
+
+<v:f eqn="prod @7 21600 pixelWidth"/>
+
+<v:f eqn="sum @8 21600 0"/>
+
+<v:f eqn="prod @7 21600 pixelHeight"/>
+
+<v:f eqn="sum @10 21600 0"/>
+
+</v:formulas>
+
+<v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+
+<o:lock v:ext="edit" aspectratio="t"/>
+
+</v:shapetype><v:shape id="Imagen_x0020_70" o:spid="_x0000_i1025" type="#_x0000_t75"
+
+alt=" C=AB" style='width:46.5pt;height:9pt;visibility:visible'>
+
+<v:imagedata src="file:///C:\DOCUME~1\PC\CONFIG~1\Temp\msohtml1\01\clip_image001.png"
+
+o:title=" C=AB"/>
+
+</v:shape><![endif]--><!--[if !vml]--><br>
+
+<!--[endif]--></span><o:p></o:p>
+
+</p>
+
+<p class="MsoNormal" style="text-align: center" align="center">
+
+<o:p> </o:p><img src="./sumador_files/eXe_LaTeX_math_2.9.gif" exe_math_latex="eXe_LaTeX_math_2.9.gif.tex" exe_math_size="4"><span style="font-size: 7pt; color: black"><!--[endif]--></span><o:p></o:p>
+
+</p>
+
+<p>
+
+Que una vez implementado
+
+con puertas lógicas, un semisumador tendría el circuito:
+
+</p>
+
+<table align="center" border="0">
+
+	<tbody>
+
+		<tr>
+
+			<td> <img src="./sumador_files/semisumador.jpg" title="Semisumador" height="136" width="292"></td>
+
+		</tr>
+
+		<tr align="center">
+
+			<td>Imagen 20. Elaboración propia </td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+</div></div>
+</div>
+<div class="FreeTextIdevice" id="id40">
+<div class="iDevice emphasis0">
+<div id="ta40_1" class="block" style="display:block">
+
+<p>
+
+<b>Sumador completo</b>. Presenta tres entradas,
+
+dos correspondientes a los dos bits que se van a sumar y una tercera con el
+
+acarreo de la suma anterior. Y tiene dos salidas, el resultado de la suma y el
+
+acarreo producido. Su tabla de verdad será:
+
+</p>
+
+<p>
+
+&nbsp;
+
+</p>
+
+<table align="center" border="1">
+
+	<tbody>
+
+		<tr>
+
+			<td colspan="3" align="center">
+
+			<p>
+
+			Entradas
+
+			</p>
+
+			</td>
+
+			<td colspan="2" align="center"> Salidas</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> A</td>
+
+			<td align="center">B <br>
+
+			</td>
+
+			<td align="center">C<sup>-1 </sup></td>
+
+			<td align="center">C </td>
+
+			<td align="center">S </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">0 </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">1<br>
+
+			</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">1 </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">1 </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">0 </td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">0</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center"> 1</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+			<td align="center">1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">0</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center">1</td>
+
+			<td align="center"> 1</td>
+
+			<td align="center"> 0</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+<p>
+
+Sus
+
+funciones canónicas serán:
+
+</p>
+
+<p align="center">
+
+<img src="./sumador_files/eXe_LaTeX_math_2.6.gif" exe_math_latex="eXe_LaTeX_math_2.6.gif.tex" exe_math_size="4">
+
+</p>
+
+<div align="center">
+
+</div>
+
+<div align="center">
+
+</div>
+
+<p align="center">
+
+<img src="./sumador_files/eXe_LaTeX_math_4.2.gif" exe_math_latex="eXe_LaTeX_math_4.2.gif.tex" exe_math_size="4">
+
+</p>
+
+<p>
+
+Que una vez simplificadas quedarían:
+
+</p>
+
+<p align="center">
+
+<img src="./sumador_files/eXe_LaTeX_math_6.1.gif" exe_math_latex="eXe_LaTeX_math_6.1.gif.tex" exe_math_size="4">
+
+</p>
+
+<div align="center">
+
+</div>
+
+<div align="center">
+
+</div>
+
+<p align="center">
+
+<img src="./sumador_files/eXe_LaTeX_math_8.1.gif" exe_math_latex="eXe_LaTeX_math_8.1.gif.tex" exe_math_size="4">
+
+</p>
+
+<p>
+
+O bien:
+
+</p>
+
+<p align="center">
+
+<img src="./sumador_files/eXe_LaTeX_math_10.gif" exe_math_latex="eXe_LaTeX_math_10.gif.tex" exe_math_size="4"> 
+
+</p>
+
+<p class="MsoNormal">
+
+Una vez implementado con puertas lógicas el sumador presentaría
+
+cualquiera de los siguientes circuitos:
+
+</p>
+
+<table align="center" border="0">
+
+	<tbody>
+
+		<tr>
+
+			<td> <img src="./sumador_files/sumadorCompleto1.jpg" title="Implemantación de sumador con puertas lógicas 1" height="224" width="380"></td>
+
+			<td><img src="./sumador_files/sumadorCompleto2.jpg" title="Implemantación de sumador con puertas lógicas 2" height="216" width="353"> <br>
+
+			</td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> Imagen 21. Elaboración propia</td>
+
+			<td align="center">  Imagen 22. Elaboración propia</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+<p class="MsoNormal">
+
+&nbsp;
+
+</p>
+
+<p class="MsoNormal">
+
+&nbsp;
+
+</p>
+
+</div></div>
+</div>
+<div class="FreeTextIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_1" class="block" style="display:block">
+
+<p class="MsoNormal">
+
+Aunque, como ya hemos dicho en otros casos, en realidad estos circuitos no se cablean con puertas
+
+lógicas, si no que forman parte de circuitos integrados como el CI 7483, que es
+
+un sumador de cuatro bits.
+
+</p>
+
+<table align="center" border="0">
+
+	<tbody>
+
+		<tr>
+
+			<td> <img src="./sumador_files/sumadorCompleto7483.jpg" title="Identificación de pines en el sumador 7483" height="287" width="421"></td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center"> Imagen 23. Elaboración propia</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+<p class="MsoNormal">
+
+El esquema
+
+</p>
+
+<table align="center" border="0">
+
+	<tbody>
+
+		<tr>
+
+			<td> <img src="./sumador_files/sumadorCompleto7483esquema.jpg" title="Esquema del 7483" height="335" width="450"></td>
+
+		</tr>
+
+		<tr>
+
+			<td align="center">Imagen 24. Elaboración propia <br>
+
+			</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+<p class="MsoNormal">
+
+&nbsp;
+
+</p>
+
+</div></div>
+</div>
+<div class="FreeTextIdevice" id="id42">
+<div class="iDevice emphasis0">
+<div id="ta42_1" class="block" style="display:block">
+
+<p class="MsoNormal">
+
+El esquema mostrado en la figura es el conexionado interno que
+
+presenta dicho sumador de 4 bits, configurado dentro del CI 7483.
+
+</p>
+
+<table align="center" border="0">
+
+	<tbody>
+
+		<tr>
+
+			<td> <img src="./sumador_files/simadorCircuiteria7483.jpg" title="Iplementación del sumador con puertas lógicas" height="547" width="742"></td>
+
+		</tr>
+
+		<tr align="center">
+
+			<td> Imagen 25. <a href="http://www.alldatasheet.com/datasheet-pdf/pdf/128897/FAIRCHILD/7483A.html" target="_blank">alldatasheet</a>.&nbsp;© </td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+<p class="MsoNormal">
+
+&nbsp;
+
+</p>
+
+<p>
+
+Características del sumador de 4 bits 7483:
+
+</p>
+
+<p>
+
+Es un sumador completo que ejecuta la suma de dos números binarios
+
+de cuatro bits. Hay salida de suma por cada bit y el acarreo resultante (C4),
+
+se obtiene del cuarto bit.
+
+</p>
+
+<p>
+
+Está diseñado para velocidades medias-altas de funcionamiento, con
+
+bits múltiples de suma en paralelo y acarreo en serie.
+
+</p>
+
+<ul>
+
+	<li>Tensión de
+
+	alimentación.......................4,5V a
+
+	5,25V.</li>
+
+	<li>Temperatura de
+
+	funcionamiento.............0 a 70ºC.</li>
+
+	<li>Cargabilidad de salida normalizada C4......5
+
+	U.L.</li>
+
+	<li>Cargabilidad de las salidas de
+
+	suma.........10 U.L.</li>
+
+	<li>Tensión de entrada alta
+
+	mínima..............2V.</li>
+
+	<li>Tensión de entrada de alta
+
+	máxima.........0,8V.<o:p></o:p></li>
+
+</ul>
+
+<p class="MsoNormal">
+
+&nbsp;
+
+</p>
+
+</div></div>
+</div>
+<div class="FreeTextIdevice" id="id43">
+<div class="iDevice emphasis0">
+<div id="ta43_1" class="block" style="display:block">
+
+<p class="MsoNormal">
+
+Para sumar números de más de un bit, también se recurre al
+
+conexionado de sumadores binarios en paralelo, donde el acarreo de la suma de
+
+dos dígitos será una entrada a sumar en el paso siguiente. En este caso se
+
+precisan tantos semisumadores como bits tengamos que sumar. El montaje de la
+
+figura posterior tiene un funcionamiento idéntico al del CI 7483, aunque
+
+presenta incompatibilidades a nivel de <a href="http://www.juntadeandalucia.es/averroes/educacion_permanente/glosario/index.php/Pin" onclick="window.open(&#39;http://www.juntadeandalucia.es/averroes/educacion_permanente/glosario/index.php/PIN&#39;,&#39;pin&#39;,&#39;width=400,height=100,left=&#39;+(screen.availWidth/2-200)+&#39;,top=&#39;+(screen.availHeight/2-50)+&#39;&#39;);return false;">pines</a>.
+
+</p>
+
+<table align="center" border="0">
+
+	<tbody>
+
+		<tr>
+
+			<td><img src="./sumador_files/sumadoresConcatenados.jpg" title="Conexionado de sumadores binarios" height="254" width="500"> <br>
+
+			</td>
+
+		</tr>
+
+		<tr align="center">
+
+			<td>  Imagen 26. Elaboración propia</td>
+
+		</tr>
+
+	</tbody>
+
+</table>
+
+</div></div>
+</div>
+<div class="noprt" align="right"><a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/6_comparadores.html">« Anterior</a> | <a href="http://e-ducativa.catedu.es/44700165/aula/archivos/repositorio/4750/4923/html/8_restadores.html"> Siguiente »</a></div>
+</div>
+</div>
+
+</body></html>

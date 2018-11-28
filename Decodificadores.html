@@ -1,0 +1,37 @@
+<DOCTYPE HTML>
+
+<html long="es"
+<head>
+  <meta charset="utf-8">
+ <title>Decodificadores</title>
+</head>
+<body bgcolor="white" text="black"><!--Mi texto sera blanco-->
+<p align="justify">
+<br/>
+Decodificadores<br/><br/>
+
+El decodificador es un dispositivo que acepta una entrada digital codificada en binario y activa una salida. Este dispositivo tiene varias salidas, y se activará aquella que establezca el código aplicado a la entrada.<br/>
+
+Con un código de n bits se pueden encontrar 2n posibles combinaciones. Si se tienen 3 bits (3 entradas) serán posibles 23 = 8 combinaciones. Una combinación en particular activará sólo una salida. Por ejemplo: activar la salida Q2 hay que poner en la entrada el equivalente al número 2 en binario (102).<br/>
+
+En un decodificador de 2 a 4 (se tienen 2 pines o patitas de entrada y 4 pines o patitas de salida). En la entrada se pone el código en binario (00, 01, 10, 11), que hará que se active sólo una salida de las cuatro posibles. Ver en el diagrama anterior una representación de un decodificador de 2 a 4<br/><br/>
+
+<img src="imagenes/deco.gif"><br/><br>
+
+Observando con atención el gráfico se puede ver que en la entrada E y en todas las salidas Q, hay una pequeña esfera o bolita. Esta esfera indica que la entrada (en el caso de E) y las salidas, son activas en bajo. Con esto se quiere decir que cuando se pone A0 = 0 y A1 = 0 y estamos escogiendo la salida Q0, ésta tendrá un nivel de voltaje bajo, mientras que todas las otras salidas (Q1, Q2 y Q3) estarán en nivel alto.<br/><br/>
+
+De igual manera cuando la entrada E está en nivel bajo (activo en bajo), el decodificador está habilitado. Si está en nivel alto, el decodificador está inhabilitado y ninguna entrada en A0 y A1 tendrá efecto. Ver la tabla de verdad siguiente:<br/><br/>
+
+<img src="imagenes/tabladeco.gif"><br/><br>
+
+También existen decodificadores de 3 a 8 ( 3 entradas a 8 salidas), de 4 a 16 (4 entradas a 16 salidas), etc.<br/><br/>
+
+Ojo:<br/><br/>
+
+– X significa que la entrada puede cualquier cosa (es indiferente)<br/>
+– 1=H=High,0=L=Low.<br/><br/>
+Ver el siguiente video como un complemento de lo antes mensionado<br/><br/>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/9W8Z070YAYU?ecver=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+</body>
+</html>
